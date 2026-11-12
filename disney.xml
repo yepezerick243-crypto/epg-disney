@@ -5,6 +5,7 @@
     </channel>
     <channel id="DCLA.mx">
         <display-name>Disney Channel</display-name>
+        <icon src="https://upload.wikimedia.org/wikipedia/commons/3/38/Disney_channel_2019.png" />
     </channel>
     <programme start="20261112055400 -0500" stop="20261112061700 -0500" channel="DCLA.mx">
         <title lang="es">Prodigiosa: las aventuras de Ladybug</title>
