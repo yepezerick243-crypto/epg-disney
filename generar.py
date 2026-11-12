@@ -20,6 +20,8 @@ CANAL_URI = "disney"
 CANAL = "DCLA.mx"
 NOMBRE = "Disney Channel"
 
+LOGO = "https://upload.wikimedia.org/wikipedia/commons/3/38/Disney_channel_2019.png"
+
 ZONA = ZoneInfo("America/Guayaquil")
 OFFSET = -300
 
@@ -189,6 +191,39 @@ def agregar_texto(padre, etiqueta, valor, idioma="es"):
     return elemento
 
 
+def actualizar_canal(root):
+    canal = next(
+        (
+            elemento for elemento in root.findall("channel")
+            if elemento.get("id") == CANAL
+        ),
+        None,
+    )
+
+    if canal is None:
+        canal = ET.SubElement(root, "channel", {"id": CANAL})
+
+    # Actualizar nombre
+    nombres = canal.findall("display-name")
+
+    if nombres:
+        nombres[0].text = NOMBRE
+        for extra in nombres[1:]:
+            canal.remove(extra)
+    else:
+        agregar_texto(canal, "display-name", NOMBRE, None)
+
+    # Actualizar logo
+    iconos = canal.findall("icon")
+
+    if iconos:
+        iconos[0].set("src", LOGO)
+        for extra in iconos[1:]:
+            canal.remove(extra)
+    else:
+        ET.SubElement(canal, "icon", {"src": LOGO})
+
+
 def crear_nodo_programa(datos, final):
     inicio = datos["inicio"]
 
@@ -241,17 +276,7 @@ def cargar_xml():
             root = ET.parse(ARCHIVO).getroot()
 
             if root.tag == "tv":
-                if not any(
-                    canal.get("id") == CANAL
-                    for canal in root.findall("channel")
-                ):
-                    canal = ET.SubElement(
-                        root, "channel", {"id": CANAL}
-                    )
-                    agregar_texto(
-                        canal, "display-name", NOMBRE, None
-                    )
-
+                actualizar_canal(root)
                 return root
 
         except ET.ParseError:
@@ -261,9 +286,7 @@ def cargar_xml():
         "generator-info-name": "EPG Disney mi.tv"
     })
 
-    canal = ET.SubElement(root, "channel", {"id": CANAL})
-    agregar_texto(canal, "display-name", NOMBRE, None)
-
+    actualizar_canal(root)
     return root
 
 
@@ -329,6 +352,7 @@ def main():
     )
 
     root = cargar_xml()
+    actualizar_canal(root)
 
     existentes = {
         (p.get("channel"), p.get("start"))
@@ -393,6 +417,8 @@ def main():
     print("Programas nuevos:", nuevos)
     print("Programas sin hora final disponible:", sin_final)
     print("Programas acumulados:", len(root.findall("programme")))
+    print("Logo del canal:", LOGO)
+    print("ID del canal:", CANAL)
     print("Archivo generado:", ARCHIVO)
     print("=" * 58)
 
