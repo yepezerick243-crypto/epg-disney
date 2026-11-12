@@ -17,7 +17,7 @@ from pathlib import Path
 BASE = "https://mi.tv"
 PAIS = "mx"
 CANAL_URI = "disney"
-CANAL = "DisneyChannel.mx"
+CANAL = "DCLA.mx"
 NOMBRE = "Disney Channel"
 
 ZONA = ZoneInfo("America/Guayaquil")
