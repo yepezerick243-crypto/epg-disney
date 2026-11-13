@@ -179,6 +179,7 @@ def fecha_xml(instante):
 
 def agregar_texto(padre, etiqueta, valor, idioma="es"):
     valor = limpiar(valor)
+
     if not valor:
         return None
 
@@ -203,7 +204,6 @@ def actualizar_canal(root):
     if canal is None:
         canal = ET.SubElement(root, "channel", {"id": CANAL})
 
-    # Actualizar nombre
     nombres = canal.findall("display-name")
 
     if nombres:
@@ -213,7 +213,6 @@ def actualizar_canal(root):
     else:
         agregar_texto(canal, "display-name", NOMBRE, None)
 
-    # Actualizar logo
     iconos = canal.findall("icon")
 
     if iconos:
@@ -237,34 +236,51 @@ def crear_nodo_programa(datos, final):
     })
 
     agregar_texto(nodo, "title", datos["titulo"])
-    agregar_texto(nodo, "sub-title", datos["subtitulo"])
-    agregar_texto(nodo, "desc", datos["sinopsis"])
 
-    if datos["temporada"] or datos["episodio"]:
-        partes = []
+    temporada = datos["temporada"]
+    episodio = datos["episodio"]
+    subtitulo = datos["subtitulo"]
 
-        if datos["temporada"]:
-            partes.append(f"Temporada {datos['temporada']}")
-
-        if datos["episodio"]:
-            partes.append(f"Episodio {datos['episodio']}")
-
-        agregar_texto(
-            nodo,
-            "episode-num",
-            " ".join(partes),
-            "onscreen",
+    if temporada and episodio:
+        identificacion = (
+            f"Temporada {temporada} Episodio {episodio}"
         )
 
-        if datos["temporada"].isdigit() and datos["episodio"].isdigit():
-            temporada_xml = int(datos["temporada"]) - 1
-            episodio_xml = int(datos["episodio"]) - 1
+        if subtitulo:
+            subtitulo = f"{identificacion} - {subtitulo}"
+        else:
+            subtitulo = identificacion
 
-            agregar_texto(
+    agregar_texto(nodo, "sub-title", subtitulo)
+    agregar_texto(nodo, "desc", datos["sinopsis"])
+
+    if temporada or episodio:
+        partes = []
+
+        if temporada:
+            partes.append(f"Temporada {temporada}")
+
+        if episodio:
+            partes.append(f"Episodio {episodio}")
+
+        elemento_onscreen = ET.SubElement(
+            nodo,
+            "episode-num",
+            {"system": "onscreen"},
+        )
+        elemento_onscreen.text = " ".join(partes)
+
+        if temporada.isdigit() and episodio.isdigit():
+            temporada_xml = int(temporada) - 1
+            episodio_xml = int(episodio) - 1
+
+            elemento_xmltv = ET.SubElement(
                 nodo,
                 "episode-num",
-                f"{temporada_xml}.{episodio_xml}.",
-                "xmltv_ns",
+                {"system": "xmltv_ns"},
+            )
+            elemento_xmltv.text = (
+                f"{temporada_xml}.{episodio_xml}."
             )
 
     return nodo
@@ -287,6 +303,7 @@ def cargar_xml():
     })
 
     actualizar_canal(root)
+
     return root
 
 
@@ -361,6 +378,7 @@ def main():
 
     nuevos = 0
     sin_final = 0
+    actualizados = 0
 
     for indice, programa in enumerate(programas):
         inicio = programa["inicio"]
@@ -386,6 +404,21 @@ def main():
         clave = (nodo.get("channel"), nodo.get("start"))
 
         if clave in existentes:
+            # Actualizar el programa existente con los nuevos metadatos.
+            anterior = next(
+                (
+                    p for p in root.findall("programme")
+                    if (p.get("channel"), p.get("start")) == clave
+                ),
+                None,
+            )
+
+            if anterior is not None:
+                posicion = list(root).index(anterior)
+                root.remove(anterior)
+                root.insert(posicion, nodo)
+                actualizados += 1
+
             continue
 
         root.append(nodo)
@@ -415,6 +448,7 @@ def main():
     print("EXTRACCIÓN TERMINADA")
     print("Fechas consultadas correctamente:", fechas_consultadas)
     print("Programas nuevos:", nuevos)
+    print("Programas actualizados:", actualizados)
     print("Programas sin hora final disponible:", sin_final)
     print("Programas acumulados:", len(root.findall("programme")))
     print("Logo del canal:", LOGO)
