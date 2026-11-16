@@ -4499,8 +4499,8 @@
     </programme>
     <programme start="20261118022300 -0500" stop="20261118023400 -0500" channel="DCLA.mx">
         <title lang="es">ZOMBIES: La serie re-animada</title>
-        <sub-title lang="es">Temporada 1 Episodio 16 - El Ter-men-nator</sub-title>
-        <desc lang="es">Bree quiere ingresar en el Corredor de la fama de las porristas, pero las críticas destruyen su confianza.</desc>
+        <sub-title lang="es">Temporada 1 Episodio 16 - Un mini bar demasiado lejos/ El Ter-men-nator</sub-title>
+        <desc lang="es">Zed y sus amigos encuentran un mini refrigerador, pero es demasiado pequeño para compartirlo. / Bree quiere ingresar al Salón de la Fama de las Porristas, pero un comentario negativo destruye su confianza.</desc>
         <episode-num system="onscreen">Temporada 1 Episodio 16</episode-num>
         <episode-num system="xmltv_ns">0.15.</episode-num>
     </programme>
@@ -4679,7 +4679,7 @@
         <episode-num lang="onscreen">Temporada 2 Episodio 20</episode-num>
         <episode-num lang="xmltv_ns">1.19.</episode-num>
     </programme>
-    <programme start="20261118055100 -0500" stop="20261118061400 -0500" channel="DCLA.mx">
+    <programme start="20261118055100 -0500" stop="20261119055300 -0500" channel="DCLA.mx">
         <title lang="es">Prodigiosa: las aventuras de Ladybug</title>
         <sub-title lang="es">Temporada 3 Episodio 13 - Desperada</sub-title>
         <desc lang="es">Marinette y sus amigos pasan el rato en la residencia de Couffaine para escucharlos tocar. Jagged Stone se les acerca y les explica que está buscando un nuevo guitarrista después de despedir a su antigua guitarrista Vivica.</desc>
@@ -5948,8 +5948,8 @@
     </programme>
     <programme start="20261119163000 -0500" stop="20261119165800 -0500" channel="DCLA.mx">
         <title lang="es">Kiff</title>
-        <sub-title lang="es">Temporada 2 Episodio 17 - El gran paseo para Kristophe / Irritante, raro, genial</sub-title>
-        <desc lang="es">Kiff y Barry llevan a Kristophe al acuario. / Kiff se preocupa porque ella es molesta.</desc>
+        <sub-title lang="es">Temporada 2 Episodio 17 - Trevor la torre / Amigos en fila</sub-title>
+        <desc lang="es">Trevor se convierte en la base de la nueva moda de la Escuela de Table Town, pero ¿a qué precio? / Kiff, Barry y Terri van al Centro Comercial de Table Town, pero se quedan atrapados en una larga fila.</desc>
         <episode-num system="onscreen">Temporada 2 Episodio 17</episode-num>
         <episode-num system="xmltv_ns">1.16.</episode-num>
     </programme>
