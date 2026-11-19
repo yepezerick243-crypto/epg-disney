@@ -54,8 +54,6 @@ def obtener_html(fecha):
         try:
             respuesta = SESION.get(url, timeout=40)
 
-            # Un 404 significa que mi.tv todavía no ofrece esa fecha.
-            # No es necesario repetir cuatro veces la misma consulta.
             if respuesta.status_code == 404:
                 print(f"Fecha no disponible en mi.tv: {fecha}")
                 return None
@@ -181,13 +179,18 @@ def extraer_programas(html, fecha):
             episodio = patron.group(2)
             titulo_episodio = limpiar(patron.group(3) or "")
 
+            # Si el subtítulo contiene la identificación
+            # del episodio, dejamos solamente su título.
+            subtitulo = titulo_episodio
+
         programas.append({
             "inicio": inicio,
             "titulo": titulo,
-            "subtitulo": titulo_episodio or subtitulo,
+            "subtitulo": subtitulo,
             "sinopsis": sinopsis,
             "temporada": temporada,
             "episodio": episodio,
+            "titulo_episodio": titulo_episodio,
             "url": url_programa,
         })
 
@@ -268,20 +271,47 @@ def crear_nodo_programa(datos, final):
     temporada = datos["temporada"]
     episodio = datos["episodio"]
     subtitulo = datos["subtitulo"]
+    titulo_episodio = datos.get("titulo_episodio", "")
+
+    # Mantener el título del episodio en sub-title.
+    agregar_texto(nodo, "sub-title", subtitulo)
+
+    # Construir la identificación del episodio.
+    identificacion = ""
 
     if temporada and episodio:
         identificacion = (
             f"Temporada {temporada} Episodio {episodio}"
         )
+    elif temporada:
+        identificacion = f"Temporada {temporada}"
+    elif episodio:
+        identificacion = f"Episodio {episodio}"
 
-        if subtitulo:
-            subtitulo = f"{identificacion} - {subtitulo}"
-        else:
-            subtitulo = identificacion
+    # Primer desc: temporada, episodio y título.
+    if identificacion:
+        descripcion_episodio = identificacion
 
-    agregar_texto(nodo, "sub-title", subtitulo)
-    agregar_texto(nodo, "desc", datos["sinopsis"])
+        if titulo_episodio:
+            descripcion_episodio += f" - {titulo_episodio}"
+        elif subtitulo:
+            descripcion_episodio += f" - {subtitulo}"
 
+        agregar_texto(
+            nodo,
+            "desc",
+            descripcion_episodio,
+        )
+
+    # Segundo desc: conservar la sinopsis original.
+    agregar_texto(
+        nodo,
+        "desc",
+        datos["sinopsis"],
+    )
+
+    # Conservar también los números de episodio
+    # para compatibilidad con lectores XMLTV.
     if temporada or episodio:
         partes = []
 
@@ -370,14 +400,11 @@ def main():
 
     limite = medianoche + timedelta(days=MAX_DIAS + 1)
 
-    # Los días que queremos actualizar.
     fechas_objetivo = [
         fecha_inicio + timedelta(days=desplazamiento)
         for desplazamiento in range(MAX_DIAS + 1)
     ]
 
-    # El día adicional solo sirve para calcular el final
-    # del último programa del período.
     fecha_adicional = fecha_inicio + timedelta(
         days=MAX_DIAS + 1
     )
@@ -397,7 +424,6 @@ def main():
     fechas_vacias = []
     fechas_error = []
 
-    # Consultar cada día de forma independiente.
     for fecha in fechas_consulta:
         fecha_texto = fecha.strftime("%Y-%m-%d")
 
@@ -428,8 +454,6 @@ def main():
             if registros:
                 todos.extend(registros)
 
-                # Solo se actualizan fechas que realmente
-                # tienen programación recibida.
                 if fecha in fechas_objetivo:
                     fechas_actualizables.add(fecha)
 
@@ -447,8 +471,6 @@ def main():
 
         time.sleep(0.4)
 
-    # Si no se obtuvo programación de ningún día objetivo,
-    # no se modifica el XML.
     if not fechas_actualizables:
         print("\n" + "=" * 58)
         print("ACTUALIZACIÓN CANCELADA")
@@ -471,12 +493,8 @@ def main():
         key=lambda p: p["inicio"],
     )
 
-    # Cargar el XML anterior para conservar los días
-    # que mi.tv todavía no ha publicado.
     root = cargar_xml()
 
-    # Identificar los inicios de programas antiguos que
-    # pertenecen a fechas que NO vamos a reemplazar.
     inicios_conservados = []
 
     for nodo in root.findall("programme"):
@@ -491,7 +509,6 @@ def main():
         if inicio.date() not in fechas_actualizables:
             inicios_conservados.append(inicio)
 
-    # Preparar todos los inicios nuevos.
     inicios_nuevos = [
         programa["inicio"]
         for programa in programas
@@ -500,14 +517,12 @@ def main():
     nuevos_nodos = []
     sin_final = 0
 
-    # Crear los programas nuevos.
     for programa in programas:
         inicio = programa["inicio"]
 
         if inicio < medianoche or inicio >= limite:
             continue
 
-        # Buscar el siguiente programa nuevo.
         siguientes_nuevos = [
             valor
             for valor in inicios_nuevos
@@ -520,8 +535,6 @@ def main():
             else None
         )
 
-        # Si no existe otro programa nuevo, buscar el siguiente
-        # programa antiguo de una fecha que se conservará.
         siguientes_conservados = [
             valor
             for valor in inicios_conservados
@@ -577,7 +590,6 @@ def main():
     for nodo in nuevos_nodos:
         root.append(nodo)
 
-    # Actualizar el canal y conservar su logo.
     actualizar_canal(root)
 
     # Ordenar cronológicamente todos los programas.
@@ -597,7 +609,6 @@ def main():
 
     ET.indent(root, space="    ")
 
-    # Guardar mediante archivo temporal.
     temporal = ARCHIVO.with_suffix(
         ARCHIVO.suffix + ".tmp"
     )
@@ -610,7 +621,6 @@ def main():
 
     temporal.replace(ARCHIVO)
 
-    # Resumen.
     print("\n" + "=" * 58)
     print("EXTRACCIÓN TERMINADA")
     print("Fechas con programación nueva:", len(fechas_actualizables))
