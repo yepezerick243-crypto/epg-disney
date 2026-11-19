@@ -1,4 +1,3 @@
-
 import re
 import time
 import requests
@@ -323,6 +322,12 @@ def main():
 
     limite = medianoche + timedelta(days=MAX_DIAS + 1)
 
+    # Se consulta un día adicional para conocer el final del último programa.
+    fechas_necesarias = [
+        fecha_inicio + timedelta(days=desplazamiento)
+        for desplazamiento in range(MAX_DIAS + 2)
+    ]
+
     print("=" * 58)
     print("GENERADOR EPG DISNEY CHANNEL - MI.TV")
     print("=" * 58)
@@ -332,34 +337,58 @@ def main():
     print("Hasta:", limite.isoformat())
 
     todos = []
-    fechas_consultadas = 0
+    fechas_correctas = []
+    errores = []
 
-    for desplazamiento in range(MAX_DIAS + 2):
-        fecha = fecha_inicio + timedelta(days=desplazamiento)
+    # Descargar todas las fechas antes de modificar el XML.
+    # Si una consulta falla, se conserva el XML anterior sin cambios.
+    for fecha in fechas_necesarias:
         fecha_texto = fecha.strftime("%Y-%m-%d")
-
         print(f"\nConsultando: {fecha_texto}")
 
         html = obtener_html(fecha)
 
         if html is None:
+            errores.append(fecha_texto)
             print("No se pudo obtener esta fecha.")
             continue
 
-        registros = extraer_programas(html, fecha)
-        print("Programas encontrados:", len(registros))
+        try:
+            registros = extraer_programas(html, fecha)
 
-        if registros:
+            # Una página sin estructura reconocible no debe considerarse
+            # una consulta correcta, porque podría borrar programación válida.
+            soup = BeautifulSoup(html, "html.parser")
+            if soup.select_one("ul.broadcasts") is None and not soup.find("li"):
+                raise RuntimeError(
+                    "La respuesta no contiene la estructura de programación."
+                )
+
+            print("Programas encontrados:", len(registros))
             todos.extend(registros)
-            fechas_consultadas += 1
+            fechas_correctas.append(fecha)
+
+        except Exception as error:
+            errores.append(fecha_texto)
+            print(f"Error al interpretar la programación: {error}")
 
         time.sleep(0.4)
 
-    unicos = {}
+    if errores or len(fechas_correctas) != len(fechas_necesarias):
+        print("\n" + "=" * 58)
+        print("ACTUALIZACIÓN CANCELADA")
+        print("No se modificó el XML porque faltan fechas por consultar:")
+        for fecha_texto in errores:
+            print(" -", fecha_texto)
+        print("El archivo anterior se conserva para evitar perder horarios.")
+        print("=" * 58)
+        return
 
+    # Eliminar duplicados que mi.tv pueda devolver al consultar días contiguos.
+    # Para una misma hora de inicio se conserva el primer registro encontrado.
+    unicos = {}
     for programa in todos:
         clave = programa["inicio"]
-
         if clave not in unicos:
             unicos[clave] = programa
 
@@ -368,17 +397,10 @@ def main():
         key=lambda p: p["inicio"],
     )
 
-    root = cargar_xml()
-    actualizar_canal(root)
-
-    existentes = {
-        (p.get("channel"), p.get("start"))
-        for p in root.findall("programme")
-    }
-
-    nuevos = 0
+    # Construir primero la programación nueva en memoria.
+    # El inicio siguiente determina el final de cada emisión.
+    nuevos_nodos = []
     sin_final = 0
-    actualizados = 0
 
     for indice, programa in enumerate(programas):
         inicio = programa["inicio"]
@@ -398,35 +420,51 @@ def main():
 
         nodo = crear_nodo_programa(programa, final)
 
-        if nodo is None:
+        if nodo is not None:
+            nuevos_nodos.append(nodo)
+
+    if not nuevos_nodos:
+        print("\nNo se generó programación nueva.")
+        print("Se conserva el XML anterior para evitar borrar datos.")
+        return
+
+    # Cargar el XML existente y actualizar los datos del canal.
+    root = cargar_xml()
+    actualizar_canal(root)
+
+    # CORRECCIÓN PRINCIPAL:
+    # eliminar los registros antiguos de DCLA.mx solamente dentro del
+    # período que acabamos de consultar. Los demás canales y el historial
+    # anterior/posterior quedan intactos.
+    eliminados = 0
+
+    for nodo in list(root.findall("programme")):
+        if nodo.get("channel") != CANAL:
             continue
 
-        clave = (nodo.get("channel"), nodo.get("start"))
+        inicio_texto = nodo.get("start", "")
 
-        if clave in existentes:
-            # Actualizar el programa existente con los nuevos metadatos.
-            anterior = next(
-                (
-                    p for p in root.findall("programme")
-                    if (p.get("channel"), p.get("start")) == clave
-                ),
-                None,
+        try:
+            inicio_existente = datetime.strptime(
+                inicio_texto,
+                "%Y%m%d%H%M%S %z",
             )
-
-            if anterior is not None:
-                posicion = list(root).index(anterior)
-                root.remove(anterior)
-                root.insert(posicion, nodo)
-                actualizados += 1
-
+        except ValueError:
+            # No tocar registros con fechas que no podamos interpretar.
             continue
 
+        inicio_existente = inicio_existente.astimezone(ZONA)
+
+        if medianoche <= inicio_existente < limite:
+            root.remove(nodo)
+            eliminados += 1
+
+    # Insertar la programación recién obtenida.
+    for nodo in nuevos_nodos:
         root.append(nodo)
-        existentes.add(clave)
-        nuevos += 1
 
+    # Orden cronológico de todo el XML acumulado.
     nodos = root.findall("programme")
-
     for nodo in nodos:
         root.remove(nodo)
 
@@ -438,17 +476,22 @@ def main():
 
     ET.indent(root, space="    ")
 
+    # Guardar primero en un archivo temporal y luego reemplazar el XML.
+    # Así se evita dejar un archivo incompleto si ocurre un error al escribir.
+    temporal = ARCHIVO.with_suffix(ARCHIVO.suffix + ".tmp")
+
     ET.ElementTree(root).write(
-        ARCHIVO,
+        temporal,
         encoding="utf-8",
         xml_declaration=True,
     )
+    temporal.replace(ARCHIVO)
 
     print("\n" + "=" * 58)
     print("EXTRACCIÓN TERMINADA")
-    print("Fechas consultadas correctamente:", fechas_consultadas)
-    print("Programas nuevos:", nuevos)
-    print("Programas actualizados:", actualizados)
+    print("Fechas consultadas correctamente:", len(fechas_correctas))
+    print("Programas nuevos:", len(nuevos_nodos))
+    print("Registros antiguos de DCLA.mx reemplazados:", eliminados)
     print("Programas sin hora final disponible:", sin_final)
     print("Programas acumulados:", len(root.findall("programme")))
     print("Logo del canal:", LOGO)
