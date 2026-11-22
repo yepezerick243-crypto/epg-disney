@@ -6293,97 +6293,6 @@
         <episode-num system="onscreen">Temporada 1 Episodio 2</episode-num>
         <episode-num system="xmltv_ns">0.1.</episode-num>
     </programme>
-    <programme start="20261122002800 -0500" stop="20261122005700 -0500" channel="DCLA.mx">
-        <title lang="es">Secretos en Sulphur Springs</title>
-        <sub-title lang="es">Temporada 3 Episodio 1 - El tiempo no me deja</sub-title>
-        <desc lang="es">Mientras está atrapado en el futuro, Griffin se entera de que el fantasma está arruinando sus vidas; Harper y Savannah intentan traer a Griffin de regreso al presente.</desc>
-        <episode-num system="onscreen">Temporada 3 Episodio 1</episode-num>
-        <episode-num system="xmltv_ns">2.0.</episode-num>
-    </programme>
-    <programme start="20261122005700 -0500" stop="20261122012200 -0500" channel="DCLA.mx">
-        <title lang="es">The Owl House - La Casa Búho</title>
-        <sub-title lang="es">Temporada 2 Episodio 1 - Mareas separadas</sub-title>
-        <desc lang="es">Luz se siente culpable de que Eda pierda sus poderes, por lo que zarpa en busca de una recompensa lucrativa para ayudar a la Casa del Búho.</desc>
-        <episode-num system="onscreen">Temporada 2 Episodio 1</episode-num>
-        <episode-num system="xmltv_ns">1.0.</episode-num>
-    </programme>
-    <programme start="20261122012200 -0500" stop="20261122014700 -0500" channel="DCLA.mx">
-        <title lang="es">The Owl House - La Casa Búho</title>
-        <sub-title lang="es">Temporada 2 Episodio 2 - Salvarse de la expulsión</sub-title>
-        <desc lang="es">Cuando los padres de Amity consiguen que Luz, Willow y Gus sean expulsados de Hexside, Luz hace un trato peligroso con ellos para volver a la escuela.</desc>
-        <episode-num system="onscreen">Temporada 2 Episodio 2</episode-num>
-        <episode-num system="xmltv_ns">1.1.</episode-num>
-    </programme>
-    <programme start="20261122014700 -0500" stop="20261122020900 -0500" channel="DCLA.mx">
-        <title lang="es">The Owl House - La Casa Búho</title>
-        <sub-title lang="es">Temporada 2 Episodio 3 - Ecos del pasado</sub-title>
-        <desc lang="es">Los delirios de grandeza de King llevan a Luz, Lilith y Hooty a una nueva isla peligrosa.</desc>
-        <episode-num system="onscreen">Temporada 2 Episodio 3</episode-num>
-        <episode-num system="xmltv_ns">1.2.</episode-num>
-    </programme>
-    <programme start="20261122020900 -0500" stop="20261122023200 -0500" channel="DCLA.mx">
-        <title lang="es">The Owl House - La Casa Búho</title>
-        <sub-title lang="es">Temporada 2 Episodio 4 - Manteniendo los miedos</sub-title>
-        <desc lang="es">Eda recibe una visita no deseada de un miembro de la familia que ejerce presión sobre todos en la Casa del Búho.</desc>
-        <episode-num system="onscreen">Temporada 2 Episodio 4</episode-num>
-        <episode-num system="xmltv_ns">1.3.</episode-num>
-    </programme>
-    <programme start="20261122023200 -0500" stop="20261122025500 -0500" channel="DCLA.mx">
-        <title lang="es">The Owl House - La Casa Búho</title>
-        <sub-title lang="es">Temporada 2 Episodio 5 - A través de las ruinas del espejo</sub-title>
-        <desc lang="es">Gus intenta impresionar a un grupo de chicos geniales de Glandus High, mientras que Luz y Amity viajan a la sección más peligrosa de la biblioteca.</desc>
-        <episode-num system="onscreen">Temporada 2 Episodio 5</episode-num>
-        <episode-num system="xmltv_ns">1.4.</episode-num>
-    </programme>
-    <programme start="20261122025500 -0500" stop="20261122031800 -0500" channel="DCLA.mx">
-        <title lang="es">The Owl House - La Casa Búho</title>
-        <sub-title lang="es">Temporada 2 Episodio 6 - Cacería de taliamigos</sub-title>
-        <desc lang="es">Es el día de emparejamiento de Palisman en Hexside, pero Luz no coincide con un Palisman propio y pronto se encuentra en un viaje inesperado con un enemigo.</desc>
-        <episode-num system="onscreen">Temporada 2 Episodio 6</episode-num>
-        <episode-num system="xmltv_ns">1.5.</episode-num>
-    </programme>
-    <programme start="20261122031800 -0500" stop="20261122034100 -0500" channel="DCLA.mx">
-        <title lang="es">Los hechiceros de Waverly Place</title>
-        <sub-title lang="es">Temporada 1 Episodio 2 - Primer beso</sub-title>
-        <desc lang="es">Alex usa un hechizo para retroceder en el tiempo y evitar que el primer beso de Justin sea un desastre. Luego, la voz de los NY Mets quiere usar el sándwich de Max para el sándwich oficial del Met, pero ella no recuerda cómo lo hizo.</desc>
-        <episode-num system="onscreen">Temporada 1 Episodio 2</episode-num>
-        <episode-num system="xmltv_ns">0.1.</episode-num>
-    </programme>
-    <programme start="20261122034100 -0500" stop="20261122040400 -0500" channel="DCLA.mx">
-        <title lang="es">Los hechiceros de Waverly Place</title>
-        <sub-title lang="es">Temporada 1 Episodio 3 - Casi me ahogaba en una fuente de chocolate</sub-title>
-        <desc lang="es">Alex utiliza a un duende de bolsillo para pasar un examen de español. Pero sus hermanos descubren la travesura y envían a un duende que come chocolates para arruinarle su cita.</desc>
-        <episode-num system="onscreen">Temporada 1 Episodio 3</episode-num>
-        <episode-num system="xmltv_ns">0.2.</episode-num>
-    </programme>
-    <programme start="20261122040400 -0500" stop="20261122043000 -0500" channel="DCLA.mx">
-        <title lang="es">Acampados</title>
-        <sub-title lang="es">Temporada 1 Episodio 12 - El regreso de Luke</sub-title>
-        <desc lang="es">Luke se reúne con sus hermanos para que Ravi les brinde ayuda escolar de verano. Mientras, se desata una guerra por la tierra entre el Campamento Kikiwaka y el campamento rival que está al otro lado del lago.</desc>
-        <episode-num system="onscreen">Temporada 1 Episodio 12</episode-num>
-        <episode-num system="xmltv_ns">0.11.</episode-num>
-    </programme>
-    <programme start="20261122043000 -0500" stop="20261122045600 -0500" channel="DCLA.mx">
-        <title lang="es">Jessie</title>
-        <sub-title lang="es">Temporada 1 Episodio 19 - No te ahogues en una taza de té</sub-title>
-        <desc lang="es">Emma y Zuri planean una quinta primera cita romántica y llena de misterio para Jessie y Tony.</desc>
-        <episode-num system="onscreen">Temporada 1 Episodio 19</episode-num>
-        <episode-num system="xmltv_ns">0.18.</episode-num>
-    </programme>
-    <programme start="20261122045600 -0500" stop="20261122052100 -0500" channel="DCLA.mx">
-        <title lang="es">Prodigiosa: las aventuras de Ladybug</title>
-        <sub-title lang="es">Temporada 3 Episodio 11 - Miraculer</sub-title>
-        <desc lang="es">Sabrina está enojada con Chloé por la atención que le da a Ladybug. Se convierte en Miraculer y tiene la capacidad de quitarle poderes a los superhéroes.</desc>
-        <episode-num system="onscreen">Temporada 3 Episodio 11</episode-num>
-        <episode-num system="xmltv_ns">2.10.</episode-num>
-    </programme>
-    <programme start="20261122052100 -0500" stop="20261122054400 -0500" channel="DCLA.mx">
-        <title lang="es">Star vs. Las fuerzas del mal</title>
-        <sub-title lang="es">Temporada 3 Episodio 7 - Demonismo / Intercambio escolar</sub-title>
-        <desc lang="es">¡La relación de Star y Tom se pone a prueba cuando Tom decide deshacerse de sus demonios! Marco decide esforzarse al máximo para vivir la vida en el presente en la Tierra.</desc>
-        <episode-num system="onscreen">Temporada 3 Episodio 7</episode-num>
-        <episode-num system="xmltv_ns">2.6.</episode-num>
-    </programme>
     <programme start="20261122054400 -0500" stop="20261122060700 -0500" channel="DCLA.mx">
         <title lang="es">Anfibilandia</title>
         <sub-title lang="es">Temporada 3 Episodio 5 - Reparando a Ranabot / Anne, la exterminadora</sub-title>
@@ -8487,5 +8396,300 @@
         <title lang="es">Bichos, una aventura en miniatura</title>
         <sub-title lang="es">A Bug's Life</sub-title>
         <desc lang="es">Embárcate en un increíble viaje con una pequeña hormiguita en una búsqueda por juntar una banda de valientes guerreros para ayudarla a pelear contra los abusivos saltamontes que amenazan su hogar.</desc>
+    </programme>
+    <programme start="20261128000000 -0500" stop="20261128003000 -0500" channel="DCLA.mx">
+        <title lang="es">Acampados</title>
+        <sub-title lang="es">Temporada 3 Episodio 14 - Un castigo cruel e inusual</sub-title>
+        <desc lang="es">En Moose Rump, los chicos encuentran una caja, que los transporta hasta la época colonial.</desc>
+        <episode-num system="onscreen">Temporada 3 Episodio 14</episode-num>
+        <episode-num system="xmltv_ns">2.13.</episode-num>
+    </programme>
+    <programme start="20261128003000 -0500" stop="20261128010000 -0500" channel="DCLA.mx">
+        <title lang="es">Vampirina: una vampirina adolescente</title>
+        <sub-title lang="es">Temporada 2 Episodio 5 - Pensándolo dos veces</sub-title>
+        <desc lang="es">Llega Halloween y la transmisión en vivo, pero Vee empieza a dudar de sí misma. La Reina Hechicera secuestra a Vee y a Elijah y Vee se debate si debe renunciar a su naturaleza de vampira</desc>
+        <episode-num system="onscreen">Temporada 2 Episodio 5</episode-num>
+        <episode-num system="xmltv_ns">1.4.</episode-num>
+    </programme>
+    <programme start="20261128010000 -0500" stop="20261128013000 -0500" channel="DCLA.mx">
+        <title lang="es">Anfibilandia</title>
+        <sub-title lang="es">Temporada 1 Episodio 11 - El día de las larvas / Al compás del amor</sub-title>
+        <desc lang="es">Durante el Día del Grubhog, Sprig tiene que decidir si cumplir con sus responsabilidades o divertirse en el carnaval. / Para impresionar a Sylvia Sundew, Hop Pop le pide a Anne que le enseñe a bailar.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 11</episode-num>
+        <episode-num system="xmltv_ns">0.10.</episode-num>
+    </programme>
+    <programme start="20261128013000 -0500" stop="20261128020000 -0500" channel="DCLA.mx">
+        <title lang="es">Phineas y Ferb</title>
+        <sub-title lang="es">Temporada 3 Episodio 7 - Un mal día / el mega fabuloso súper palacio brincolín de Phineas y Ferb</sub-title>
+        <desc lang="es">Candace se hace un mal corte de pelo. / El Dr. Doofenshmirtz pretende ganar un concurso de pastel de carne con una receta familiar y una pistola de rayos Rotten-inator.</desc>
+        <episode-num system="onscreen">Temporada 3 Episodio 7</episode-num>
+        <episode-num system="xmltv_ns">2.6.</episode-num>
+    </programme>
+    <programme start="20261128020000 -0500" stop="20261128023000 -0500" channel="DCLA.mx">
+        <title lang="es">StuGo</title>
+        <sub-title lang="es">Temporada 1 Episodio 5 - Sin manos de hombre, no hay isla / Hermanas al agua</sub-title>
+        <desc lang="es">Chip intenta adoptar las costumbres del superviviente Nils Vulfen. / Cuando los niños encuentran un delfín, todos se emocionan, excepto Merian.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 5</episode-num>
+        <episode-num system="xmltv_ns">0.4.</episode-num>
+    </programme>
+    <programme start="20261128023000 -0500" stop="20261128024500 -0500" channel="DCLA.mx">
+        <title lang="es">ZOMBIES: La serie re-animada</title>
+        <sub-title lang="es">Temporada 1 Episodio 2 - Jóvenes, salvajes y hora libre</sub-title>
+        <desc lang="es">Zed y Addison usan la hora libre para enseñarle a la estresada A-Spen a relajarse.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 2</episode-num>
+        <episode-num system="xmltv_ns">0.1.</episode-num>
+    </programme>
+    <programme start="20261128024500 -0500" stop="20261128030000 -0500" channel="DCLA.mx">
+        <title lang="es">Tara Duncan</title>
+        <sub-title lang="es">Temporada 1 Episodio 4 - Los colores</sub-title>
+        <desc lang="es">La ciudad de Tingal está perdiendo sus colores. Tara, Cal y Robin investigan la emergencia de esta tienda, pero se encuentran cara a cara con el rey, que busca los poderes de Tara.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 4</episode-num>
+        <episode-num system="xmltv_ns">0.3.</episode-num>
+    </programme>
+    <programme start="20261128030000 -0500" stop="20261128033000 -0500" channel="DCLA.mx">
+        <title lang="es">Prodigiosa: las aventuras de Ladybug</title>
+        <sub-title lang="es">Temporada 5 Episodio 10 - Transmisión: La decisión de los Kwamis - Parte 1</sub-title>
+        <desc lang="es">Lamentando ver a sus portadores tan tristes por tener que renunciar a sus sentimientos, Tikki y Plagg toman una decisión drástica que cambiará muchas cosas en París...</desc>
+        <episode-num system="onscreen">Temporada 5 Episodio 10</episode-num>
+        <episode-num system="xmltv_ns">4.9.</episode-num>
+    </programme>
+    <programme start="20261128033000 -0500" stop="20261128040000 -0500" channel="DCLA.mx">
+        <title lang="es">The Owl House - La Casa Búho</title>
+        <sub-title lang="es">Temporada 1 Episodio 10 - El escape de Taliamigo</sub-title>
+        <desc lang="es">Cuando una aventura con el bastón de Eda sale mal, Luz y sus amigos tienen que recuperar el bastón de una misteriosa criatura del bosque o perderlo para siempre. Mientras tanto, King ataca a los niños con Cursed Eda.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 10</episode-num>
+        <episode-num system="xmltv_ns">0.9.</episode-num>
+    </programme>
+    <programme start="20261128040000 -0500" stop="20261128043000 -0500" channel="DCLA.mx">
+        <title lang="es">Los Green en la gran ciudad</title>
+        <sub-title lang="es">Temporada 3 Episodio 5 - Green y ambientalistas / Una tregua inesperada</sub-title>
+        <desc lang="es">Tilly y Bill emprenden un viaje épico para llevar una bombilla fluorescente desechada a un centro de desechos electrónicos./ Tilly trabaja para resolver una disputa de mucho tiempo entre la abuela y el Sr. Grigorian.</desc>
+        <episode-num system="onscreen">Temporada 3 Episodio 5</episode-num>
+        <episode-num system="xmltv_ns">2.4.</episode-num>
+    </programme>
+    <programme start="20261128043000 -0500" stop="20261128050000 -0500" channel="DCLA.mx">
+        <title lang="es">Los hechiceros más allá de Waverly Place</title>
+        <sub-title lang="es">Temporada 3 Episodio 32 - La grieta que no deja de dar sorpresas</sub-title>
+        <desc lang="es">Tras la pérdida de Alex, Billie se convence de que sus poderes son demasiado peligrosos. Entonces, decide renunciar a ellos, para mantener a salvo a su familia.</desc>
+        <episode-num system="onscreen">Temporada 3 Episodio 32</episode-num>
+        <episode-num system="xmltv_ns">2.31.</episode-num>
+    </programme>
+    <programme start="20261128050000 -0500" stop="20261128053000 -0500" channel="DCLA.mx">
+        <title lang="es">Jessie</title>
+        <sub-title lang="es">Temporada 3 Episodio 17 - Luz, cámara, ¡distracción!</sub-title>
+        <desc lang="es">Jessie recluta a los niños para que la ayuden a dirigir, filmar y editar su trabajo para un festival de cine. Las cosas se complican: ¿terminará su película a tiempo?</desc>
+        <episode-num system="onscreen">Temporada 3 Episodio 17</episode-num>
+        <episode-num system="xmltv_ns">2.16.</episode-num>
+    </programme>
+    <programme start="20261128053000 -0500" stop="20261128060000 -0500" channel="DCLA.mx">
+        <title lang="es">Los hechiceros de Waverly Place</title>
+        <sub-title lang="es">Temporada 2 Episodio 22 - Mi tutora, tutora</sub-title>
+        <desc lang="es">¡Jerry contrata a un tutor llamado Tutor para ayudar a Max a aprobar un examen en la escuela!</desc>
+        <episode-num system="onscreen">Temporada 2 Episodio 22</episode-num>
+        <episode-num system="xmltv_ns">1.21.</episode-num>
+    </programme>
+    <programme start="20261128060000 -0500" stop="20261128063000 -0500" channel="DCLA.mx">
+        <title lang="es">Star vs. Las fuerzas del mal</title>
+        <sub-title lang="es">Temporada 4 Episodio 58 - Escapar de los pasteleños</sub-title>
+        <desc lang="es">Star continúa buscando a su madre, lo que la lleva a la casa de Pie Folk.</desc>
+        <episode-num system="onscreen">Temporada 4 Episodio 58</episode-num>
+        <episode-num system="xmltv_ns">3.57.</episode-num>
+    </programme>
+    <programme start="20261128063000 -0500" stop="20261128070000 -0500" channel="DCLA.mx">
+        <title lang="es">Los Green en la gran ciudad</title>
+        <sub-title lang="es">Temporada 1 Episodio 12 - Barry Cuda / Un merecido descanso</sub-title>
+        <desc lang="es">Cricket usa su primera propina trabajando en Big Coffee para comprar un pez de juguete cantante./ Gramma echa a la familia de la casa por el día, por lo que se quedan en un hotel por primera vez.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 12</episode-num>
+        <episode-num system="xmltv_ns">0.11.</episode-num>
+    </programme>
+    <programme start="20261128070000 -0500" stop="20261128073000 -0500" channel="DCLA.mx">
+        <title lang="es">Prodigiosa: las aventuras de Ladybug</title>
+        <sub-title lang="es">Temporada 3 Episodio 19 - Aguafiestas</sub-title>
+        <desc lang="es">Nino organiza una fiesta para Adrien, pero cuando Wayhem no puede entrar, es akumatizado en Party Crasher.</desc>
+        <episode-num system="onscreen">Temporada 3 Episodio 19</episode-num>
+        <episode-num system="xmltv_ns">2.18.</episode-num>
+    </programme>
+    <programme start="20261128073000 -0500" stop="20261128075500 -0500" channel="DCLA.mx">
+        <title lang="es">Las aventuras enredadas de Rapunzel</title>
+        <sub-title lang="es">Temporada 3 Episodio 8 - Día de los animales</sub-title>
+        <desc lang="es">Max, Pascal y los animales deben rescatar a Rapunzel y a la pandilla de quedar atrapados para siempre en una prisión mágica. Sin embargo, las cosas se complican cuando un ladrón roba el colgante que aprisiona a los protagonistas.</desc>
+        <episode-num system="onscreen">Temporada 3 Episodio 8</episode-num>
+        <episode-num system="xmltv_ns">2.7.</episode-num>
+    </programme>
+    <programme start="20261128075500 -0500" stop="20261128080000 -0500" channel="DCLA.mx">
+        <title lang="es">Star vs. Las fuerzas del mal</title>
+        <sub-title lang="es">Temporada 4 Episodio 36 - La taberna del final del multiverso</sub-title>
+        <desc lang="es">Star busca una manera de derrotar a Mina y sus guerreros solarianos.</desc>
+        <episode-num system="onscreen">Temporada 4 Episodio 36</episode-num>
+        <episode-num system="xmltv_ns">3.35.</episode-num>
+    </programme>
+    <programme start="20261128080000 -0500" stop="20261128083000 -0500" channel="DCLA.mx">
+        <title lang="es">Patoaventuras</title>
+        <sub-title lang="es">Temporada 1 Episodio 1 - ¡Woo-oo!</sub-title>
+        <desc lang="es">El pato Donald lleva a Hugo, Paco y Luis a la apartada mansión del Tío Rico McPato, donde descubren los secretos de la familia y se aventuran más de lo que imaginaron.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 1</episode-num>
+        <episode-num system="xmltv_ns">0.0.</episode-num>
+    </programme>
+    <programme start="20261128083000 -0500" stop="20261128090000 -0500" channel="DCLA.mx">
+        <title lang="es">Star vs. Las fuerzas del mal</title>
+        <sub-title lang="es">Temporada 2 Episodio 13 - Dar vuelta la página / Nolódiga</sub-title>
+        <desc lang="es">Star tenta resistir à tentação de ler um capítulo proibido do seu Livro de Feitiços. Aparece uma segunda cabeça em Marco que conta seus mais escuros segredos e inseguranças.</desc>
+        <episode-num system="onscreen">Temporada 2 Episodio 13</episode-num>
+        <episode-num system="xmltv_ns">1.12.</episode-num>
+    </programme>
+    <programme start="20261128090000 -0500" stop="20261128093000 -0500" channel="DCLA.mx">
+        <title lang="es">The Owl House - La Casa Búho</title>
+        <sub-title lang="es">Temporada 1 Episodio 12 - Aventuras mágicas</sub-title>
+        <desc lang="es">Luz necesita aprender un nuevo hechizo, por lo que Eda la lleva al lugar más mágico de la isla para entrenar.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 12</episode-num>
+        <episode-num system="xmltv_ns">0.11.</episode-num>
+    </programme>
+    <programme start="20261128093000 -0500" stop="20261128100000 -0500" channel="DCLA.mx">
+        <title lang="es">Moon Girl y Devil, el dinosaurio</title>
+        <sub-title lang="es">Temporada 2 Episodio 9 - En el atraco</sub-title>
+        <desc lang="es">Cuando Pops adopta a un perro callejero y lo anota en un concurso de perros, Lunella, paranoica, está convencida de que la criatura es un alienígena malvado que intenta sabotear el evento.</desc>
+        <episode-num system="onscreen">Temporada 2 Episodio 9</episode-num>
+        <episode-num system="xmltv_ns">1.8.</episode-num>
+    </programme>
+    <programme start="20261128100000 -0500" stop="20261128103000 -0500" channel="DCLA.mx">
+        <title lang="es">Gravity Falls: un verano de misterios</title>
+        <sub-title lang="es">Temporada 1 Episodio 4 - La mano que mece a Mabel</sub-title>
+        <desc lang="es">Dipper y Mabel descubren que su nuevo y aparentemente angelical vecino Gideon, resulta ser el psíquico adorado por el pueblo.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 4</episode-num>
+        <episode-num system="xmltv_ns">0.3.</episode-num>
+    </programme>
+    <programme start="20261128103000 -0500" stop="20261128110000 -0500" channel="DCLA.mx">
+        <title lang="es">Los Green en la gran ciudad</title>
+        <sub-title lang="es">Temporada 5 Episodio 117 - Chicas bravas / Suéter grande</sub-title>
+        <desc lang="es">Nancy se preocupa, porque cree que se ha vuelto aburrida, así que lleva a Gloria a pasar una noche de diversión. / Nick destruye la nueva atracción de Smalton, al borde de la carretera.</desc>
+        <episode-num system="onscreen">Temporada 5 Episodio 117</episode-num>
+        <episode-num system="xmltv_ns">4.116.</episode-num>
+    </programme>
+    <programme start="20261128110000 -0500" stop="20261128113000 -0500" channel="DCLA.mx">
+        <title lang="es">Prodigiosa: las aventuras de Ladybug</title>
+        <sub-title lang="es">Temporada 7 Episodio 1 - Rebobinadora</sub-title>
+        <desc lang="es">Ahora que Monarca tiene a los kwamis, París corre un grave peligro. ¿Lograrán Ladybug y Cat Noir impedir que reescriba la historia antes de que sea demasiado tarde?</desc>
+        <episode-num system="onscreen">Temporada 7 Episodio 1</episode-num>
+        <episode-num system="xmltv_ns">6.0.</episode-num>
+    </programme>
+    <programme start="20261128113000 -0500" stop="20261128120000 -0500" channel="DCLA.mx">
+        <title lang="es">Phineas y Ferb</title>
+        <sub-title lang="es">Temporada 2 Episodio 30 - Vacaciones en Háwai con Phineas y Ferb - Partes 1 y 2</sub-title>
+        <desc lang="es">Candace debe deshacerse de un colgante que trae mala suerte y trata de arrojarlo en la cima de un volcán. Sus hermanos la acompañan y aprovechan para montar algunas olas con el surfista profesional Laird Hamilton.</desc>
+        <episode-num system="onscreen">Temporada 2 Episodio 30</episode-num>
+        <episode-num system="xmltv_ns">1.29.</episode-num>
+    </programme>
+    <programme start="20261128120000 -0500" stop="20261128134500 -0500" channel="DCLA.mx">
+        <title lang="es">Chica vs. Monstruo</title>
+        <sub-title lang="es">Girl vs. Monster</sub-title>
+        <desc lang="es">Skylar está decidida a ir a una fiesta donde estará el chico que le gusta, aunque sus padres no la dejen. Todo cambia cuando libera a una criatura, pero lo que ella no sabe es que su familia caza monstruos y que graves peligros le esperan.</desc>
+    </programme>
+    <programme start="20261128134500 -0500" stop="20261128141500 -0500" channel="DCLA.mx">
+        <title lang="es">Los hechiceros más allá de Waverly Place</title>
+        <sub-title lang="es">Temporada 1 Episodio 12 - Duelo de varitas</sub-title>
+        <desc lang="es">Billie, Roman y Winter se infiltran en el Mundo Mágico para que Billie pueda competir en una batalla mágica subterránea: la Batalla de las Varitas. Mientras tanto, Milo se hace cargo de los niños en casa.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 12</episode-num>
+        <episode-num system="xmltv_ns">0.11.</episode-num>
+    </programme>
+    <programme start="20261128141500 -0500" stop="20261128144500 -0500" channel="DCLA.mx">
+        <title lang="es">Vampirina: una vampirina adolescente</title>
+        <sub-title lang="es">Temporada 1 Episodio 9 - Primer final</sub-title>
+        <desc lang="es">Cuando Vee le pide ayuda a Demi para una presentación, su secreto fantasmal corre peligro. Mientras tanto, invitan a Elijah a una fiesta de rap clandestina.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 9</episode-num>
+        <episode-num system="xmltv_ns">0.8.</episode-num>
+    </programme>
+    <programme start="20261128144500 -0500" stop="20261128150000 -0500" channel="DCLA.mx">
+        <title lang="es">Star vs. Las fuerzas del mal</title>
+        <sub-title lang="es">Temporada 2 Episodio 6 - Star, niñera / En el ruedo</sub-title>
+        <desc lang="es">Star y Marco descubren que tienen estilos conflictivos de cuidado de niños que oscilan entre la responsabilidad y la diversión. Mientras tanto, Sapotor tiene que completar una misión importante y robar un cargamento de maíz a las ratas.</desc>
+        <episode-num system="onscreen">Temporada 2 Episodio 6</episode-num>
+        <episode-num system="xmltv_ns">1.5.</episode-num>
+    </programme>
+    <programme start="20261128150000 -0500" stop="20261128153000 -0500" channel="DCLA.mx">
+        <title lang="es">Phineas y Ferb</title>
+        <sub-title lang="es">Temporada 5 Episodio 1 - El nuevo verano / Nublado con probabilidad de mamá</sub-title>
+        <desc lang="es">Los chicos deciden animar su fiesta de verano local con atracciones gigantes. / Trabajan para salvar a mamá tras ser alcanzada por el inador de Doof.</desc>
+        <episode-num system="onscreen">Temporada 5 Episodio 1</episode-num>
+        <episode-num system="xmltv_ns">4.0.</episode-num>
+    </programme>
+    <programme start="20261128153000 -0500" stop="20261128160000 -0500" channel="DCLA.mx">
+        <title lang="es">Phineas y Ferb</title>
+        <sub-title lang="es">Temporada 5 Episodio 2 - El submarino sándwich submarino / Licencia para acusar</sub-title>
+        <desc lang="es">Los niños construyen un submarino gigante de sándwiches mientras Doof roba comida. / Candace intenta atrapar a los niños mientras hace su examen de conducir, y Doof causa caos en el tráfico.</desc>
+        <episode-num system="onscreen">Temporada 5 Episodio 2</episode-num>
+        <episode-num system="xmltv_ns">4.1.</episode-num>
+    </programme>
+    <programme start="20261128160000 -0500" stop="20261128163000 -0500" channel="DCLA.mx">
+        <title lang="es">Phineas y Ferb</title>
+        <sub-title lang="es">Temporada 5 Episodio 3 - Otro día para morir de calor / Los secretos de Doof</sub-title>
+        <desc lang="es">Los niños construyen un tobogán de hielo sin fin para combatir el calor mientras Doof lleva aceite a un parque acuático. / Candace y Doof acuden al mismo psicólogo, que cree que sus experiencias pueden estar relacionadas.</desc>
+        <episode-num system="onscreen">Temporada 5 Episodio 3</episode-num>
+        <episode-num system="xmltv_ns">4.2.</episode-num>
+    </programme>
+    <programme start="20261128163000 -0500" stop="20261128170000 -0500" channel="DCLA.mx">
+        <title lang="es">Phineas y Ferb</title>
+        <sub-title lang="es">Temporada 5 Episodio 4 - Tropey McTropeFace / Biblio-Blast!</sub-title>
+        <desc lang="es">Los chicos construyen un zootropo gigante que emprende una aventura propia. / Construyen una estantería enorme que es atacada por un ejército de plantas Doof.</desc>
+        <episode-num system="onscreen">Temporada 5 Episodio 4</episode-num>
+        <episode-num system="xmltv_ns">4.3.</episode-num>
+    </programme>
+    <programme start="20261128170000 -0500" stop="20261128173000 -0500" channel="DCLA.mx">
+        <title lang="es">Phineas y Ferb</title>
+        <sub-title lang="es">Temporada 5 Episodio 5 - Visita al veterinario / Más que un becario</sub-title>
+        <desc lang="es">Los niños llevan a Perry al veterinario para una revisión y construyen un lavadero de mascotas mientras esperan. / Carl intenta ayudar a Perry a detener a Doof mientras tiene otros tres trabajos a tiempo parcial.</desc>
+        <episode-num system="onscreen">Temporada 5 Episodio 5</episode-num>
+        <episode-num system="xmltv_ns">4.4.</episode-num>
+    </programme>
+    <programme start="20261128173000 -0500" stop="20261128180000 -0500" channel="DCLA.mx">
+        <title lang="es">Phineas y Ferb</title>
+        <sub-title lang="es">Temporada 5 Episodio 6 - La aurora Perry-al / Señor de la fogata</sub-title>
+        <desc lang="es">Los Flynn-Fletcher se van de crucero mientras Doof roba productos encogidos. / Isabella lucha por liderar sola a las Fireside Girls mientras Doof renueva su malvada licencia comercial.</desc>
+        <episode-num system="onscreen">Temporada 5 Episodio 6</episode-num>
+        <episode-num system="xmltv_ns">4.5.</episode-num>
+    </programme>
+    <programme start="20261128180000 -0500" stop="20261128183000 -0500" channel="DCLA.mx">
+        <title lang="es">Los Green en la gran ciudad</title>
+        <sub-title lang="es">Temporada 1 Episodio 6 - Operación fotografía / Al rescate de Remy</sub-title>
+        <desc lang="es">Bill promete a su familia un viaje al patio de comidas del centro comercial, pero los engaña para que vayan a un estudio de retratos familiares. / Remy se salta su lección de violín para pasar el rato con Cricket.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 6</episode-num>
+        <episode-num system="xmltv_ns">0.5.</episode-num>
+    </programme>
+    <programme start="20261128183000 -0500" stop="20261128190000 -0500" channel="DCLA.mx">
+        <title lang="es">Prodigiosa: las aventuras de Ladybug</title>
+        <sub-title lang="es">Temporada 1 Episodio 13 - El mimo</sub-title>
+        <desc lang="es">El padre de Mylène es contratado para tocar bajo la Torre Eiffel en un espectáculo de mimos. Pero unas horas antes del espectáculo, lo despiden. Hawk Moth lo influencia y ahora puede hacer realidad sus mimos.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 13</episode-num>
+        <episode-num system="xmltv_ns">0.12.</episode-num>
+    </programme>
+    <programme start="20261128190000 -0500" stop="20261128210000 -0500" channel="DCLA.mx">
+        <title lang="es">Camp Rock 2: The Final Jam</title>
+        <sub-title lang="es">Comedia / 2010 / 5.1</sub-title>
+        <desc lang="es">Los compañeros regresan a Camp Rock para otro verano de diversión. Sin embargo, ellos pronto se sorprenden por Camp Star, un nuevo campamento que se ha abierto en el otro lado del lago y a atraído a muchos de instructores.</desc>
+    </programme>
+    <programme start="20261128210000 -0500" stop="20261128230000 -0500" channel="DCLA.mx">
+        <title lang="es">Camp Rock 3</title>
+        <sub-title lang="es">Comedia / 2026</sub-title>
+        <desc lang="es">En Camp Rock, los Connect 3 buscan un nuevo artista para abrir sus conciertos. Entre los campistas, como Sage, Desi, Rosie y otros, la competencia por ganar el puesto desata rivalidades y romances, ya que todos luchan por destacar.</desc>
+    </programme>
+    <programme start="20261128230000 -0500" stop="20261128233000 -0500" channel="DCLA.mx">
+        <title lang="es">Dragon Striker</title>
+        <sub-title lang="es">Temporada 1 Episodio 2 - Bienvenidos a Kal Asterock - Parte I</sub-title>
+        <desc lang="es">Key llega a Kal Asterock para seguir los pasos de su madre y convertirse en el Dragon Striker.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 2</episode-num>
+        <episode-num system="xmltv_ns">0.1.</episode-num>
+    </programme>
+    <programme start="20261128233000 -0500" stop="20261128234500 -0500" channel="DCLA.mx">
+        <title lang="es">Phineas y Ferb</title>
+        <sub-title lang="es">Temporada 1 Episodio 16 - Juguetes para el mundo</sub-title>
+        <desc lang="es">Phineas y Ferb inventan un juguete que se convierte en el más popular del mundo... ¡Aunque no haga absolutamente nada!</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 16</episode-num>
+        <episode-num system="xmltv_ns">0.15.</episode-num>
+    </programme>
+    <programme start="20261128234500 -0500" stop="20261129003000 -0500" channel="DCLA.mx">
+        <title lang="es">Selenkay</title>
+        <sub-title lang="es">Temporada 1 Episodio 4 - Fénix</sub-title>
+        <desc lang="es">Se acerca la gran inauguración del bar Fénix y Sofía anhela vivir su primera fiesta, pero sus papás le prohíben ir. Además, Diana está enojada con ella y se rehúsa a hablarle.</desc>
+        <episode-num system="onscreen">Temporada 1 Episodio 4</episode-num>
+        <episode-num system="xmltv_ns">0.3.</episode-num>
     </programme>
 </tv>
