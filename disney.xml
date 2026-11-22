@@ -8404,33 +8404,12 @@
         <episode-num system="onscreen">Temporada 3 Episodio 14</episode-num>
         <episode-num system="xmltv_ns">2.13.</episode-num>
     </programme>
-    <programme start="20261128000000 -0500" stop="20261128003000 -0500" channel="DCLA.mx">
-        <title lang="es">Acampados</title>
-        <sub-title lang="es">Temporada 3 Episodio 14 - Un castigo cruel e inusual</sub-title>
-        <desc lang="es">En Moose Rump, los chicos encuentran una caja, que los transporta hasta la época colonial.</desc>
-        <episode-num system="onscreen">Temporada 3 Episodio 14</episode-num>
-        <episode-num system="xmltv_ns">2.13.</episode-num>
-    </programme>
     <programme start="20261128003000 -0500" stop="20261128010000 -0500" channel="DCLA.mx">
         <title lang="es">Vampirina: una vampirina adolescente</title>
         <sub-title lang="es">Temporada 2 Episodio 5 - Pensándolo dos veces</sub-title>
         <desc lang="es">Llega Halloween y la transmisión en vivo, pero Vee empieza a dudar de sí misma. La Reina Hechicera secuestra a Vee y a Elijah y Vee se debate si debe renunciar a su naturaleza de vampira</desc>
         <episode-num system="onscreen">Temporada 2 Episodio 5</episode-num>
         <episode-num system="xmltv_ns">1.4.</episode-num>
-    </programme>
-    <programme start="20261128003000 -0500" stop="20261128010000 -0500" channel="DCLA.mx">
-        <title lang="es">Vampirina: una vampirina adolescente</title>
-        <sub-title lang="es">Temporada 2 Episodio 5 - Pensándolo dos veces</sub-title>
-        <desc lang="es">Llega Halloween y la transmisión en vivo, pero Vee empieza a dudar de sí misma. La Reina Hechicera secuestra a Vee y a Elijah y Vee se debate si debe renunciar a su naturaleza de vampira</desc>
-        <episode-num system="onscreen">Temporada 2 Episodio 5</episode-num>
-        <episode-num system="xmltv_ns">1.4.</episode-num>
-    </programme>
-    <programme start="20261128010000 -0500" stop="20261128013000 -0500" channel="DCLA.mx">
-        <title lang="es">Anfibilandia</title>
-        <sub-title lang="es">Temporada 1 Episodio 11 - El día de las larvas / Al compás del amor</sub-title>
-        <desc lang="es">Durante el Día del Grubhog, Sprig tiene que decidir si cumplir con sus responsabilidades o divertirse en el carnaval. / Para impresionar a Sylvia Sundew, Hop Pop le pide a Anne que le enseñe a bailar.</desc>
-        <episode-num system="onscreen">Temporada 1 Episodio 11</episode-num>
-        <episode-num system="xmltv_ns">0.10.</episode-num>
     </programme>
     <programme start="20261128010000 -0500" stop="20261128013000 -0500" channel="DCLA.mx">
         <title lang="es">Anfibilandia</title>
@@ -8446,33 +8425,12 @@
         <episode-num system="onscreen">Temporada 3 Episodio 7</episode-num>
         <episode-num system="xmltv_ns">2.6.</episode-num>
     </programme>
-    <programme start="20261128013000 -0500" stop="20261128020000 -0500" channel="DCLA.mx">
-        <title lang="es">Phineas y Ferb</title>
-        <sub-title lang="es">Temporada 3 Episodio 7 - Un mal día / el mega fabuloso súper palacio brincolín de Phineas y Ferb</sub-title>
-        <desc lang="es">Candace se hace un mal corte de pelo. / El Dr. Doofenshmirtz pretende ganar un concurso de pastel de carne con una receta familiar y una pistola de rayos Rotten-inator.</desc>
-        <episode-num system="onscreen">Temporada 3 Episodio 7</episode-num>
-        <episode-num system="xmltv_ns">2.6.</episode-num>
-    </programme>
     <programme start="20261128020000 -0500" stop="20261128023000 -0500" channel="DCLA.mx">
         <title lang="es">StuGo</title>
         <sub-title lang="es">Temporada 1 Episodio 5 - Sin manos de hombre, no hay isla / Hermanas al agua</sub-title>
         <desc lang="es">Chip intenta adoptar las costumbres del superviviente Nils Vulfen. / Cuando los niños encuentran un delfín, todos se emocionan, excepto Merian.</desc>
         <episode-num system="onscreen">Temporada 1 Episodio 5</episode-num>
         <episode-num system="xmltv_ns">0.4.</episode-num>
-    </programme>
-    <programme start="20261128020000 -0500" stop="20261128023000 -0500" channel="DCLA.mx">
-        <title lang="es">StuGo</title>
-        <sub-title lang="es">Temporada 1 Episodio 5 - Sin manos de hombre, no hay isla / Hermanas al agua</sub-title>
-        <desc lang="es">Chip intenta adoptar las costumbres del superviviente Nils Vulfen. / Cuando los niños encuentran un delfín, todos se emocionan, excepto Merian.</desc>
-        <episode-num system="onscreen">Temporada 1 Episodio 5</episode-num>
-        <episode-num system="xmltv_ns">0.4.</episode-num>
-    </programme>
-    <programme start="20261128023000 -0500" stop="20261128024500 -0500" channel="DCLA.mx">
-        <title lang="es">ZOMBIES: La serie re-animada</title>
-        <sub-title lang="es">Temporada 1 Episodio 2 - Jóvenes, salvajes y hora libre</sub-title>
-        <desc lang="es">Zed y Addison usan la hora libre para enseñarle a la estresada A-Spen a relajarse.</desc>
-        <episode-num system="onscreen">Temporada 1 Episodio 2</episode-num>
-        <episode-num system="xmltv_ns">0.1.</episode-num>
     </programme>
     <programme start="20261128023000 -0500" stop="20261128024500 -0500" channel="DCLA.mx">
         <title lang="es">ZOMBIES: La serie re-animada</title>
@@ -8488,33 +8446,12 @@
         <episode-num system="onscreen">Temporada 1 Episodio 4</episode-num>
         <episode-num system="xmltv_ns">0.3.</episode-num>
     </programme>
-    <programme start="20261128024500 -0500" stop="20261128030000 -0500" channel="DCLA.mx">
-        <title lang="es">Tara Duncan</title>
-        <sub-title lang="es">Temporada 1 Episodio 4 - Los colores</sub-title>
-        <desc lang="es">La ciudad de Tingal está perdiendo sus colores. Tara, Cal y Robin investigan la emergencia de esta tienda, pero se encuentran cara a cara con el rey, que busca los poderes de Tara.</desc>
-        <episode-num system="onscreen">Temporada 1 Episodio 4</episode-num>
-        <episode-num system="xmltv_ns">0.3.</episode-num>
-    </programme>
     <programme start="20261128030000 -0500" stop="20261128033000 -0500" channel="DCLA.mx">
         <title lang="es">Prodigiosa: las aventuras de Ladybug</title>
         <sub-title lang="es">Temporada 5 Episodio 10 - Transmisión: La decisión de los Kwamis - Parte 1</sub-title>
         <desc lang="es">Lamentando ver a sus portadores tan tristes por tener que renunciar a sus sentimientos, Tikki y Plagg toman una decisión drástica que cambiará muchas cosas en París...</desc>
         <episode-num system="onscreen">Temporada 5 Episodio 10</episode-num>
         <episode-num system="xmltv_ns">4.9.</episode-num>
-    </programme>
-    <programme start="20261128030000 -0500" stop="20261128033000 -0500" channel="DCLA.mx">
-        <title lang="es">Prodigiosa: las aventuras de Ladybug</title>
-        <sub-title lang="es">Temporada 5 Episodio 10 - Transmisión: La decisión de los Kwamis - Parte 1</sub-title>
-        <desc lang="es">Lamentando ver a sus portadores tan tristes por tener que renunciar a sus sentimientos, Tikki y Plagg toman una decisión drástica que cambiará muchas cosas en París...</desc>
-        <episode-num system="onscreen">Temporada 5 Episodio 10</episode-num>
-        <episode-num system="xmltv_ns">4.9.</episode-num>
-    </programme>
-    <programme start="20261128033000 -0500" stop="20261128040000 -0500" channel="DCLA.mx">
-        <title lang="es">The Owl House - La Casa Búho</title>
-        <sub-title lang="es">Temporada 1 Episodio 10 - El escape de Taliamigo</sub-title>
-        <desc lang="es">Cuando una aventura con el bastón de Eda sale mal, Luz y sus amigos tienen que recuperar el bastón de una misteriosa criatura del bosque o perderlo para siempre. Mientras tanto, King ataca a los niños con Cursed Eda.</desc>
-        <episode-num system="onscreen">Temporada 1 Episodio 10</episode-num>
-        <episode-num system="xmltv_ns">0.9.</episode-num>
     </programme>
     <programme start="20261128033000 -0500" stop="20261128040000 -0500" channel="DCLA.mx">
         <title lang="es">The Owl House - La Casa Búho</title>
@@ -8530,20 +8467,6 @@
         <episode-num system="onscreen">Temporada 3 Episodio 5</episode-num>
         <episode-num system="xmltv_ns">2.4.</episode-num>
     </programme>
-    <programme start="20261128040000 -0500" stop="20261128043000 -0500" channel="DCLA.mx">
-        <title lang="es">Los Green en la gran ciudad</title>
-        <sub-title lang="es">Temporada 3 Episodio 5 - Green y ambientalistas / Una tregua inesperada</sub-title>
-        <desc lang="es">Tilly y Bill emprenden un viaje épico para llevar una bombilla fluorescente desechada a un centro de desechos electrónicos./ Tilly trabaja para resolver una disputa de mucho tiempo entre la abuela y el Sr. Grigorian.</desc>
-        <episode-num system="onscreen">Temporada 3 Episodio 5</episode-num>
-        <episode-num system="xmltv_ns">2.4.</episode-num>
-    </programme>
-    <programme start="20261128043000 -0500" stop="20261128050000 -0500" channel="DCLA.mx">
-        <title lang="es">Los hechiceros más allá de Waverly Place</title>
-        <sub-title lang="es">Temporada 3 Episodio 32 - La grieta que no deja de dar sorpresas</sub-title>
-        <desc lang="es">Tras la pérdida de Alex, Billie se convence de que sus poderes son demasiado peligrosos. Entonces, decide renunciar a ellos, para mantener a salvo a su familia.</desc>
-        <episode-num system="onscreen">Temporada 3 Episodio 32</episode-num>
-        <episode-num system="xmltv_ns">2.31.</episode-num>
-    </programme>
     <programme start="20261128043000 -0500" stop="20261128050000 -0500" channel="DCLA.mx">
         <title lang="es">Los hechiceros más allá de Waverly Place</title>
         <sub-title lang="es">Temporada 3 Episodio 32 - La grieta que no deja de dar sorpresas</sub-title>
@@ -8557,20 +8480,6 @@
         <desc lang="es">Jessie recluta a los niños para que la ayuden a dirigir, filmar y editar su trabajo para un festival de cine. Las cosas se complican: ¿terminará su película a tiempo?</desc>
         <episode-num system="onscreen">Temporada 3 Episodio 17</episode-num>
         <episode-num system="xmltv_ns">2.16.</episode-num>
-    </programme>
-    <programme start="20261128050000 -0500" stop="20261128053000 -0500" channel="DCLA.mx">
-        <title lang="es">Jessie</title>
-        <sub-title lang="es">Temporada 3 Episodio 17 - Luz, cámara, ¡distracción!</sub-title>
-        <desc lang="es">Jessie recluta a los niños para que la ayuden a dirigir, filmar y editar su trabajo para un festival de cine. Las cosas se complican: ¿terminará su película a tiempo?</desc>
-        <episode-num system="onscreen">Temporada 3 Episodio 17</episode-num>
-        <episode-num system="xmltv_ns">2.16.</episode-num>
-    </programme>
-    <programme start="20261128053000 -0500" stop="20261128060000 -0500" channel="DCLA.mx">
-        <title lang="es">Los hechiceros de Waverly Place</title>
-        <sub-title lang="es">Temporada 2 Episodio 22 - Mi tutora, tutora</sub-title>
-        <desc lang="es">¡Jerry contrata a un tutor llamado Tutor para ayudar a Max a aprobar un examen en la escuela!</desc>
-        <episode-num system="onscreen">Temporada 2 Episodio 22</episode-num>
-        <episode-num system="xmltv_ns">1.21.</episode-num>
     </programme>
     <programme start="20261128053000 -0500" stop="20261128060000 -0500" channel="DCLA.mx">
         <title lang="es">Los hechiceros de Waverly Place</title>
