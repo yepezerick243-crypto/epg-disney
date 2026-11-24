@@ -1,3 +1,4 @@
+
 import re
 import time
 import requests
@@ -54,7 +55,6 @@ def obtener_html(fecha):
             respuesta = SESION.get(url, timeout=40)
 
             # Un 404 significa que mi.tv todavía no ofrece esa fecha.
-            # No es necesario repetir cuatro veces la misma consulta.
             if respuesta.status_code == 404:
                 print(f"Fecha no disponible en mi.tv: {fecha}")
                 return None
@@ -183,7 +183,8 @@ def extraer_programas(html, fecha):
         programas.append({
             "inicio": inicio,
             "titulo": titulo,
-            "subtitulo": titulo_episodio or subtitulo,
+            "subtitulo": subtitulo,
+            "titulo_episodio": titulo_episodio,
             "sinopsis": sinopsis,
             "temporada": temporada,
             "episodio": episodio,
@@ -215,6 +216,116 @@ def agregar_texto(padre, etiqueta, valor, idioma="es"):
 
     return elemento
 
+
+def agregar_descripcion_episodio(nodo, datos):
+    temporada = datos["temporada"]
+    episodio = datos["episodio"]
+    titulo_episodio = datos["titulo_episodio"]
+    sinopsis = datos["sinopsis"]
+
+    partes = []
+
+    # Identificación completa de temporada y episodio.
+    if temporada and episodio:
+        identificacion = (
+            f"Temporada {temporada} Episodio {episodio}"
+        )
+    elif temporada:
+        identificacion = f"Temporada {temporada}"
+    elif episodio:
+        identificacion = f"Episodio {episodio}"
+    else:
+        identificacion = ""
+
+    # Construir la primera línea con el título del episodio.
+    if identificacion and titulo_episodio:
+        partes.append(
+            f"{identificacion} — {titulo_episodio}"
+        )
+
+    elif identificacion:
+        partes.append(identificacion)
+
+    elif titulo_episodio:
+        partes.append(titulo_episodio)
+
+    # Añadir la sinopsis debajo del título.
+    if sinopsis:
+        partes.append(sinopsis)
+
+    if not partes:
+        return
+
+    # Crear un solo desc y conservar el salto de línea.
+    descripcion = ET.SubElement(nodo, "desc")
+    descripcion.set("lang", "es")
+    descripcion.text = "\n".join(partes)
+
+
+def crear_nodo_programa(datos, final):
+    inicio = datos["inicio"]
+
+    if final <= inicio:
+        return None
+
+    nodo = ET.Element("programme", {
+        "start": fecha_xml(inicio),
+        "stop": fecha_xml(final),
+        "channel": CANAL,
+    })
+
+    agregar_texto(nodo, "title", datos["titulo"])
+
+    # Descripción con temporada, episodio, título y sinopsis.
+    agregar_descripcion_episodio(nodo, datos)
+
+    # Número completo de temporada y episodio.
+    temporada = datos["temporada"]
+    episodio = datos["episodio"]
+
+    if temporada or episodio:
+        partes = []
+
+        if temporada:
+            partes.append(f"Temporada {temporada}")
+
+        if episodio:
+            partes.append(f"Episodio {episodio}")
+
+        elemento_episodio = ET.SubElement(
+            nodo,
+            "episode-num",
+        )
+
+        elemento_episodio.text = " ".join(partes)
+
+    return nodo
+
+
+def cargar_xml():
+    if ARCHIVO.exists():
+        try:
+            root = ET.parse(ARCHIVO).getroot()
+
+            if root.tag == "tv":
+                actualizar_canal(root)
+                return root
+
+        except ET.ParseError:
+            print("El XML anterior está dañado. Se creará uno nuevo.")
+
+    root = ET.Element("tv", {
+        "generator-info-name": "EPG Disney mi.tv"
+    })
+
+    actualizar_canal(root)
+
+    return root
+
+
+# =====================================================
+# ACTUALIZACIÓN DEL CANAL
+# =====================================================
 
 def actualizar_canal(root):
     canal = next(
@@ -248,92 +359,6 @@ def actualizar_canal(root):
             canal.remove(extra)
     else:
         ET.SubElement(canal, "icon", {"src": LOGO})
-
-
-def crear_nodo_programa(datos, final):
-    inicio = datos["inicio"]
-
-    if final <= inicio:
-        return None
-
-    nodo = ET.Element("programme", {
-        "start": fecha_xml(inicio),
-        "stop": fecha_xml(final),
-        "channel": CANAL,
-    })
-
-    agregar_texto(nodo, "title", datos["titulo"])
-
-    temporada = datos["temporada"]
-    episodio = datos["episodio"]
-    subtitulo = datos["subtitulo"]
-
-    if temporada and episodio:
-        identificacion = (
-            f"Temporada {temporada} Episodio {episodio}"
-        )
-
-        if subtitulo:
-            subtitulo = f"{identificacion} - {subtitulo}"
-        else:
-            subtitulo = identificacion
-
-    agregar_texto(nodo, "sub-title", subtitulo)
-    agregar_texto(nodo, "desc", datos["sinopsis"])
-
-    if temporada or episodio:
-        partes = []
-
-        if temporada:
-            partes.append(f"Temporada {temporada}")
-
-        if episodio:
-            partes.append(f"Episodio {episodio}")
-
-        elemento_onscreen = ET.SubElement(
-            nodo,
-            "episode-num",
-            {"system": "onscreen"},
-        )
-
-        elemento_onscreen.text = " ".join(partes)
-
-        if temporada.isdigit() and episodio.isdigit():
-            temporada_xml = int(temporada) - 1
-            episodio_xml = int(episodio) - 1
-
-            elemento_xmltv = ET.SubElement(
-                nodo,
-                "episode-num",
-                {"system": "xmltv_ns"},
-            )
-
-            elemento_xmltv.text = (
-                f"{temporada_xml}.{episodio_xml}."
-            )
-
-    return nodo
-
-
-def cargar_xml():
-    if ARCHIVO.exists():
-        try:
-            root = ET.parse(ARCHIVO).getroot()
-
-            if root.tag == "tv":
-                actualizar_canal(root)
-                return root
-
-        except ET.ParseError:
-            print("El XML anterior está dañado. Se creará uno nuevo.")
-
-    root = ET.Element("tv", {
-        "generator-info-name": "EPG Disney mi.tv"
-    })
-
-    actualizar_canal(root)
-
-    return root
 
 
 # =====================================================
